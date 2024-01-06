@@ -5,3 +5,13 @@ findOdd.cpp is designed to find a character in an array that appears an odd numb
 Given the input array is 'a', 'b', 'a', 'b', 'c', 'c', 'd'
 The character that appears an odd number of times is: d
 ```
+The `genA(int n)` function calculates the \(n\)th number in a sequence similar to Catalan numbers using dynamic programming. It initializes an array to store intermediate values, iteratively computes each element based on previous values, and returns the \(n\)th number. However, there's an off-by-one error in the return statement; it should return `temp[n]` instead of `temp[n - 1]` for the correct result.
+```
+❯ ./genA   
+Enter a number: 5
+The 5-th number in the sequence is: 14
+
+❯ ./genA
+Enter a number: 12
+The 12-th number in the sequence is: 58786
+```
